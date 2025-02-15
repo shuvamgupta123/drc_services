@@ -1,12 +1,8 @@
-/********** Template CSS **********/
 :root {
   --primary: orangered;
   --secondary: #ff4917;
   --light: #edf1fc;
   --dark: #17224d;
-}
-.footer{
-  display:none !important;
 }
 * {
   color: orangered;
