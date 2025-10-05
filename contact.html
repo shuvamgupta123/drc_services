@@ -8,6 +8,26 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+   
+
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,22 +45,26 @@
       rel="stylesheet"
     />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+
+
+  
 
     <!-- Custom Styles -->
     <style>
-      /* Reset any Tailwind interference */
-      * {
-        box-sizing: border-box;
-      }
-      
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Inter', sans-serif;
-      }
-      
       .hero-gradient {
         background: linear-gradient(135deg, #1e40af 0%, #9333ea 100%);
       }
@@ -58,292 +82,35 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       }
       
-      /* Navbar fixes */
+      /* NAVBAR FIX - Only this is added */
       .navbar {
         display: flex !important;
-        position: relative;
-        z-index: 1030;
       }
-      
       .navbar-collapse {
         display: flex !important;
-        flex-basis: auto;
       }
-      
       .navbar-nav {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 0;
-        list-style: none;
-        padding-left: 0;
-      }
-      
-      .nav-item {
-        position: relative;
-      }
-      
-      .nav-link {
-        display: block;
-        padding: 0.5rem 1rem;
-        color: rgba(0, 0, 0, 0.55);
-        text-decoration: none;
-        transition: color 0.15s ease-in-out;
-      }
-      
-      .nav-link:hover, .nav-link.active {
-        color: rgba(0, 0, 0, 0.9);
-      }
-      
-      .navbar-toggler {
-        padding: 0.25rem 0.75rem;
-        font-size: 1.25rem;
-        line-height: 1;
-        background-color: transparent;
-        border: 1px solid transparent;
-        border-radius: 0.25rem;
-      }
-      
-      /* Page header styling */
-      .page-header {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                    url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-        background-size: cover;
-        background-position: center;
-      }
-      
-      /* Tailwind-like utility classes for the contact section */
-      .tw-container {
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      
-      @media (min-width: 640px) {
-        .tw-container {
-          max-width: 640px;
-        }
-      }
-      
-      @media (min-width: 768px) {
-        .tw-container {
-          max-width: 768px;
-        }
-      }
-      
-      @media (min-width: 1024px) {
-        .tw-container {
-          max-width: 1024px;
-        }
-      }
-      
-      @media (min-width: 1280px) {
-        .tw-container {
-          max-width: 1280px;
-        }
-      }
-      
-      .tw-px-4 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      
-      .tw-py-16 {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-      
-      .tw-flex {
-        display: flex;
-      }
-      
-      .tw-flex-col {
-        flex-direction: column;
-      }
-      
-      @media (min-width: 1024px) {
-        .lg\:tw-flex-row {
-          flex-direction: row;
-        }
-      }
-      
-      .tw-gap-12 {
-        gap: 3rem;
-      }
-      
-      .lg\:tw-w-1\/2 {
-        width: 50%;
-      }
-      
-      .tw-mb-8 {
-        margin-bottom: 2rem;
-      }
-      
-      .tw-text-secondary {
-        color: #9333ea;
-      }
-      
-      .tw-uppercase {
-        text-transform: uppercase;
-      }
-      
-      .tw-tracking-wider {
-        letter-spacing: 0.05em;
-      }
-      
-      .tw-font-semibold {
-        font-weight: 600;
-      }
-      
-      .tw-text-3xl {
-        font-size: 1.875rem;
-        line-height: 2.25rem;
-      }
-      
-      .tw-font-bold {
-        font-weight: 700;
-      }
-      
-      .tw-mt-2 {
-        margin-top: 0.5rem;
-      }
-      
-      .tw-mb-4 {
-        margin-bottom: 1rem;
-      }
-      
-      .tw-text-gray-600 {
-        color: #4b5563;
-      }
-      
-      .tw-mb-6 {
-        margin-bottom: 1.5rem;
-      }
-      
-      .tw-space-y-3 > * + * {
-        margin-top: 0.75rem;
-      }
-      
-      .tw-flex {
-        display: flex;
-      }
-      
-      .tw-items-center {
-        align-items: center;
-      }
-      
-      .tw-mr-3 {
-        margin-right: 0.75rem;
-      }
-      
-      .tw-w-full {
-        width: 100%;
-      }
-      
-      .tw-h-80 {
-        height: 20rem;
-      }
-      
-      .tw-bg-white {
-        background-color: #fff;
-      }
-      
-      .tw-p-8 {
-        padding: 2rem;
-      }
-      
-      .tw-rounded-xl {
-        border-radius: 0.75rem;
-      }
-      
-      .tw-text-2xl {
-        font-size: 1.5rem;
-        line-height: 2rem;
-      }
-      
-      .tw-mb-6 {
-        margin-bottom: 1.5rem;
-      }
-      
-      .tw-block {
-        display: block;
-      }
-      
-      .tw-text-gray-700 {
-        color: #374151;
-      }
-      
-      .tw-mb-2 {
-        margin-bottom: 0.5rem;
-      }
-      
-      .tw-px-4 {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      
-      .tw-py-2 {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
-      
-      .tw-border {
-        border-width: 1px;
-      }
-      
-      .tw-border-gray-300 {
-        border-color: #d1d5db;
-      }
-      
-      .tw-rounded-lg {
-        border-radius: 0.5rem;
-      }
-      
-      .focus\:tw-ring-2:focus {
-        box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.5);
-      }
-      
-      .focus\:tw-ring-primary:focus {
-        --tw-ring-color: #1e40af;
-      }
-      
-      .focus\:tw-border-transparent:focus {
-        border-color: transparent;
-      }
-      
-      .tw-bg-primary {
-        background-color: #1e40af;
-      }
-      
-      .tw-text-white {
-        color: #fff;
-      }
-      
-      .tw-py-3 {
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-      }
-      
-      .tw-px-6 {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-      
-      .hover\:tw-bg-blue-700:hover {
-        background-color: #1d4ed8;
-      }
-      
-      .tw-transition {
-        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
-      }
-      
-      .tw-duration-300 {
-        transition-duration: 300ms;
+        display: flex !important;
       }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        corePlugins: {
+          preflight: false, // This prevents Tailwind from resetting Bootstrap styles
+        },
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1e40af',  // Blue-800
+              secondary: '#9333ea', // Purple-600
+            }
+          }
+        }
+      }
+    </script>
     
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   </head>
 
@@ -401,11 +168,21 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid nav-bar bg-light">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
-        <a href="index.html" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4"
+      >
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none"
+        >
           <h1 class="text-primary m-0">DRC Services L.L.C</h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
           <span class="fa fa-bars"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -414,7 +191,12 @@
             <a href="about.html" class="nav-item nav-link">About</a>
             <a href="service.html" class="nav-item nav-link">Services</a>
             <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Pages</a
+              >
               <div class="dropdown-menu fade-up m-0">
                 <a href="team.html" class="dropdown-item">Founders</a>
                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
@@ -422,8 +204,13 @@
             </div>
             <a href="contact.html" class="nav-item nav-link active">Contact</a>
           </div>
-          <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
-            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px">
+          <div
+            class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center"
+          >
+            <div
+              class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+              style="width: 45px; height: 45px"
+            >
               <i class="fa fa-phone-alt text-primary"></i>
             </div>
             <div class="ms-3">
@@ -435,43 +222,63 @@
       </nav>
     </div>
     <!-- Navbar End -->
-
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1e40af',  // Blue-800
+              secondary: '#9333ea', // Purple-600
+            }
+          }
+        }
+      }
+    </script>
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 py-5">
       <div class="container">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
+        <h1 class="display-3 text-white mb-3 animated slideInDown">
+          Contact Us
+        </h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <ol class="breadcrumb text-uppercase">
-            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="#">Pages</a>
+            </li>
+            <li class="breadcrumb-item text-white active" aria-current="page">
+              Contact
+            </li>
           </ol>
         </nav>
       </div>
     </div>
     <!-- Page Header End -->
 
-    <!-- Contact Section -->
-    <div class="tw-container tw-px-4 tw-py-16">
-      <div class="tw-flex tw-flex-col lg:tw-flex-row tw-gap-12">
-        <div class="lg:tw-w-1/2">
-          <div class="tw-mb-8">
-            <span class="tw-text-secondary tw-uppercase tw-tracking-wider tw-font-semibold">Get In Touch</span>
-            <h2 class="tw-text-3xl tw-font-bold tw-mt-2 tw-mb-4">Contact For Any Query</h2>
-            <p class="tw-text-gray-600 tw-mb-6">
+<!-- Contact Section -->
+    <div class="container mx-auto px-4 py-16">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/2">
+          <div class="mb-8">
+            <span class="text-secondary uppercase tracking-wider font-semibold">Get In Touch</span>
+            <h2 class="text-3xl font-bold mt-2 mb-4">Contact For Any Query</h2>
+            <p class="text-gray-600 mb-6">
               You are always welcome for our services. For any query:
             </p>
-            <div class="tw-space-y-3">
-              <div class="tw-flex tw-items-center">
-                <i class="fas fa-phone-alt text-primary tw-mr-3"></i>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="fas fa-phone-alt text-primary mr-3"></i>
                 <span>+971 56 862 9540</span>
               </div>
-              <div class="tw-flex tw-items-center">
-                <i class="fab fa-whatsapp text-primary tw-mr-3"></i>
+              <div class="flex items-center">
+                <i class="fab fa-whatsapp text-primary mr-3"></i>
                 <span>+971 56 862 9540</span>
               </div>
-              <div class="tw-flex tw-items-center">
-                <i class="far fa-envelope text-primary tw-mr-3"></i>
+              <div class="flex items-center">
+                <i class="far fa-envelope text-primary mr-3"></i>
                 <span>drcservicellc@gmail.com</span>
               </div>
             </div>
@@ -479,59 +286,59 @@
           
           <div class="map-container">
             <iframe 
-              class="tw-w-full tw-h-80"
-              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3048.9263888047963!2d55.3064957!3d25.2714424!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDE2JzE3LjIiTiA1NcKwMTgnMzIuNyJF!5e1!3m2!1sen!2snp!4v1759648716686!5m2!1sen!2snp" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-80"
+              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3048.9263888047963!2d55.3064957!3d25.2714424!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDE2JzE3LjIiTiA1NcKwMTgnMzIuNyJF!5e1!3m2!1sen!2snp!4v1759648716686!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              frameborder="0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
             ></iframe>
           </div>
         </div>
         
-        <div class="lg:tw-w-1/2">
-          <div class="tw-bg-white tw-p-8 tw-rounded-xl contact-card">
-            <h3 class="tw-text-2xl tw-font-bold tw-mb-6">Send Us a Message</h3>
+        <div class="lg:w-1/2">
+          <div class="bg-white p-8 rounded-xl contact-card">
+            <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
             <form>
-              <div class="tw-mb-4">
-                <label class="tw-block tw-text-gray-700 tw-mb-2" for="name">Your Name</label>
+              <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="name">Your Name</label>
                 <input 
                   type="text" 
                   id="name" 
-                  class="tw-w-full tw-px-4 tw-py-2 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary focus:tw-border-transparent"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Enter your name"
                 >
               </div>
-              <div class="tw-mb-4">
-                <label class="tw-block tw-text-gray-700 tw-mb-2" for="email">Email Address</label>
+              <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="email">Email Address</label>
                 <input 
                   type="email" 
                   id="email" 
-                  class="tw-w-full tw-px-4 tw-py-2 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary focus:tw-border-transparent"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Enter your email"
                 >
               </div>
-              <div class="tw-mb-4">
-                <label class="tw-block tw-text-gray-700 tw-mb-2" for="subject">Subject</label>
+              <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="subject">Subject</label>
                 <input 
                   type="text" 
                   id="subject" 
-                  class="tw-w-full tw-px-4 tw-py-2 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary focus:tw-border-transparent"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Enter subject"
                 >
               </div>
-              <div class="tw-mb-6">
-                <label class="tw-block tw-text-gray-700 tw-mb-2" for="message">Your Message</label>
+              <div class="mb-6">
+                <label class="block text-gray-700 mb-2" for="message">Your Message</label>
                 <textarea 
                   id="message" 
                   rows="5" 
-                  class="tw-w-full tw-px-4 tw-py-2 tw-border tw-border-gray-300 tw-rounded-lg focus:tw-ring-2 focus:tw-ring-primary focus:tw-border-transparent"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Enter your message"
                 ></textarea>
               </div>
               <button 
                 type="submit" 
-                class="tw-w-full tw-bg-primary tw-text-white tw-py-3 tw-px-6 tw-rounded-lg hover:tw-bg-blue-700 tw-transition tw-duration-300"
+                class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
               >
                 Send Message
               </button>
@@ -541,8 +348,12 @@
       </div>
     </div>
 
+
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div
+      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
       <div class="container py-5">
         <div class="row g-5">
           <div class="col-lg-3 col-md-6">
@@ -606,17 +417,26 @@
           </div>
         </div>
       </div>
-    </div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top">
-      <i class="bi bi-arrow-up"></i>
-    </a>
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
