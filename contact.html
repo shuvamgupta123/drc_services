@@ -59,10 +59,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-
-
-  
-
     <!-- Custom Styles -->
     <style>
       .hero-gradient {
@@ -82,30 +78,91 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       }
       
-      /* NAVBAR FIX - Only this is added */
+      /* NAVBAR FIX - Force Bootstrap navbar styles */
       .navbar {
         display: flex !important;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
       }
       .navbar-collapse {
         display: flex !important;
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
       }
       .navbar-nav {
         display: flex !important;
+        flex-direction: row;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+      }
+      .nav-item {
+        position: relative;
+      }
+      .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: rgba(0, 0, 0, 0.55);
+        text-decoration: none;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      }
+      .nav-link:hover, .nav-link.active {
+        color: rgba(0, 0, 0, 0.9);
+      }
+      .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        transition: box-shadow 0.15s ease-in-out;
+      }
+      .dropdown-menu {
+        position: absolute;
+        z-index: 1000;
+        display: none;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+      .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: 0.25rem 1rem;
+        clear: both;
+        font-weight: 400;
+        color: #212529;
+        text-align: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+      }
+      .dropdown-item:hover {
+        color: #1e2125;
+        background-color: #e9ecef;
       }
     </style>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         corePlugins: {
           preflight: false, // This prevents Tailwind from resetting Bootstrap styles
-        },
-        theme: {
-          extend: {
-            colors: {
-              primary: '#1e40af',  // Blue-800
-              secondary: '#9333ea', // Purple-600
-            }
-          }
         }
       }
     </script>
@@ -223,18 +280,6 @@
     </div>
     <!-- Navbar End -->
     
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: '#1e40af',  // Blue-800
-              secondary: '#9333ea', // Purple-600
-            }
-          }
-        }
-      }
-    </script>
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 py-5">
       <div class="container">
