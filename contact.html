@@ -75,10 +75,60 @@
         overflow: hidden;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       }
+      
       /* Fix for navbar visibility */
       .navbar-nav .nav-link {
         position: relative;
         z-index: 1;
+      }
+      
+      /* Ensure navbar stays visible */
+      .nav-bar {
+        position: relative;
+        z-index: 1000;
+      }
+      
+      /* Fix for Tailwind conflicts */
+      .navbar {
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      
+      .navbar-collapse {
+        display: flex !important;
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+      }
+      
+      .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+      }
+      
+      .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #0d6efd;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      }
+      
+      .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        transition: box-shadow 0.15s ease-in-out;
       }
     </style>
     
